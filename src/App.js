@@ -1,13 +1,27 @@
-import React from 'react';
+import React, {Component} from 'react';
+import Header from './components/header/header.component';
+import Footer from './components/footer/footer.component';
+import Carousel from './components/carousel/carousel.component';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-    HELLO WORLD
-    <button type="button" class="btn btn-primary">Primary</button>
-    </div>
-  );
-}
+class App extends Component{
+  constructor(){
+    super();
+   
+  }
 
+
+
+  render(){
+   
+    return (
+     <div> 
+      <Header/>
+      <Carousel/>
+      <Footer/>
+    </div>
+  
+    );
+  }
+}
 export default App;
