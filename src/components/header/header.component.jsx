@@ -3,12 +3,11 @@ import {Search} from '../search/search.component';
 import {Type} from '../advanced-search/type.component';
 import {Year} from '../advanced-search/year.component';
 import './header.styles.scss'
-const Header =({ handleSearchEvent, handleAdvancedSearchEvent, handleSearchTxt, handleYearTxt, handlePlotTxt, handleTypeTxt, ...remainingItems})=>
-{
-useEffect(()=>{
+const Header =({ handleSearchEvent, handleAdvancedSearchEvent, handleSearchTxt, handleYearTxt, handleTypeTxt, ...remainingItems})=>{
+
+  useEffect(()=>{
   console.log(remainingItems);
 },[])
-
   
 return(
   <div className='header'>

@@ -1,7 +1,12 @@
 body{
-  background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  background: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
   font: 'Open Sans Condensed';
   padding: 20px 60px;
+}
+
+.main-container {
+  background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  font: 'Open Sans Condensed';
 }
 
 a{
@@ -9,6 +14,14 @@ a{
   color: black;
 }
 
+
+
 *{
   box-sizing: border-box;
+}
+
+.carousel {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
 }
