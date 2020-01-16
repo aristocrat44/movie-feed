@@ -1,6 +1,6 @@
 import React from 'react';
 import './movie-card.styles.css';
-import {Card} from '../card/card.component';
+import Card from '../card/card.component';
 
 
 export const MovieCard = (props) =>{
