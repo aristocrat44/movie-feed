@@ -34,6 +34,7 @@ handleTypeTxt=(e)=>{
   this.setState({type:e.target.value})
 }
 
+// HANDLE SIMPLE SEARCH
 handleSearchEvent= async () =>{
 const search = this.state.search;
 try{
@@ -48,6 +49,7 @@ try{
 }
 }
 
+// HANDLE ADVANCE SEARCH
 handleAdvancedSearchEvent= async () =>{
 
   const {search, type, year} = this.state;
@@ -64,6 +66,7 @@ handleAdvancedSearchEvent= async () =>{
   }
   }
 
+  // HANDLE PAGINATION 1 2 3
 handlePagination = async (param) => {
   this.setState({pageCount:param});
   const search = this.state.search;
@@ -73,6 +76,7 @@ handlePagination = async (param) => {
   this.setState({movies: jsonData.Search});
 }
 
+// HANDLE PREVIOUS PAGINATION
 handlePrevious= async () => {
   const search = this.state.search;
   try{
@@ -88,6 +92,7 @@ handlePrevious= async () => {
   }
   }
 
+  // HANDLE NEXT PAGINATION
 handleNext = async () => {
   const {search, type, year} = this.state;
 try{
@@ -133,7 +138,8 @@ try{
         <div>
           <MovieCard movies={searchedMovies}/>
         </div>
-          <div>
+        <div style={{paddingTop:'10px'}}>
+          <div style={{display:`${this.state.type.length > 0 || this.state.year.length > 0 ? 'none': ''}`}}>
             <nav aria-label="Page navigation example">
               <ul className="pagination justify-content-center">
                 <li className={`page-item${this.state.pageCount <= 1 ? ' disabled': ''}`}>
@@ -148,6 +154,7 @@ try{
               </ul>
             </nav>
           </div>
+        </div>
         </div>
       <Footer/>
     </div>

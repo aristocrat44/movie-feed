@@ -2,7 +2,8 @@ import React,{useEffect} from 'react';
 import {Search} from '../search/search.component';
 import {Type} from '../advanced-search/type.component';
 import {Year} from '../advanced-search/year.component';
-import './nav.styles.scss'
+import './nav.styles.css';
+
 const Nav =({ handleSearchEvent, handleAdvancedSearchEvent, handleSearchTxt, handleYearTxt, handleTypeTxt, ...remainingItems})=>{
 
   useEffect(()=>{
@@ -33,7 +34,7 @@ return(
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
+              <h5 className="modal-title" id="exampleModalLabel">Advanced Filter Search</h5>
               <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>

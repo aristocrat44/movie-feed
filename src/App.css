@@ -1,6 +1,5 @@
 body{
-  background: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
-  font: 'Open Sans Condensed';
+  background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
   padding: 20px 60px;
   text-align: center;
   align-items: center;
