@@ -1,4 +1,6 @@
 .custom-size {
-    width: 1280px !important;
-    height: 720px !important;
+    display: flex;
+    width: auto !important;
+    height: auto !important;
+    
 }

@@ -4,7 +4,7 @@ import './news-panel.styles.css'
 
 export const NewsPanel =  (props) => {
     
-    const [list] = useState([
+   /* const [list] = useState([
                         { id: 1,
                          name:'Bad Boys for Life'
                         },
@@ -42,13 +42,12 @@ export const NewsPanel =  (props) => {
                             name:'SCOOB !'
                            },
                        
-                        ]);
+                        ]); **/
 
 
   return(
     <div className="news-panel"> 
-        <h1>Upcoming Movies 2020</h1>    
-      <h6>{list.map(movie => <li key={movie.id}> {movie.name} </li> )}</h6>
+       
     </div>
   )
 }

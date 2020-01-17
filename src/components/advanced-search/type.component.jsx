@@ -3,6 +3,7 @@ import React from 'react';
 
 export const Type = ({handleTypeTxt}) =>(
     <input type="text" name="type"
-     placeholder='type e.g. movie, series' onChange={handleTypeTxt}
+    className='form-control mr-sm-2'
+     placeholder='Type e.g. Movie, Series' onChange={handleTypeTxt}
     />
 )

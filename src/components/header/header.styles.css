@@ -1,0 +1,9 @@
+.header {
+    height:70px;
+    background-color:black; 
+    margin-bottom: 10px;
+    color: white;
+
+    border-radius: 10px     10px      0           0;
+            /* // top-left top-right bottom-right bottom-left.  */
+}

@@ -21,9 +21,3 @@ a{
 *{
   box-sizing: border-box;
 }
-
-.carousel {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-}

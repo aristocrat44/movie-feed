@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Nav from '../../components/nav/nav.component';
 import Header from '../../components/header/header.component';
 import Footer from '../../components/footer/footer.component';
 import Carousel from '../../components/carousel/carousel.component';
@@ -20,27 +21,6 @@ class HomePage extends Component{
     }
    
   }
-
-  componentDidMount(){
-   //this.getApi();
-   
-    //(response=>response.json(), ()=> console.log(response));
-   
-   //.then(Search=>this.setState({movies: Search}));
-  }
-
-//   getApi = async () => {
-  
-//     try{
-//         const blobData = await  fetch('http://www.omdbapi.com/?apikey=b2ae1b09&s=batman');
-//         const jsonData = await blobData.json();
-//         this.setState({movies: jsonData.Search});
-//         //console.log(this.state.movies);
-    
-//     }catch(error){
-//         console.error(error);
-//     }
-// }
 
 handleSearchTxt=(e)=>{
   this.setState({search:e.target.value})
@@ -124,34 +104,34 @@ try{
 }
 
 
-
-
-
-
   render(){
    const{movies, ...remainingItems} = this.state;
-
    const sortedMovies = movies.slice().sort((a,b)=> a.Year-b.Year);
    const searchedMovies = sortedMovies.filter(movie => 
-    movie.Title.toLowerCase().includes(remainingItems.search.toLowerCase())  
-    );
+      movie.Title.toLowerCase().includes(remainingItems.search.toLowerCase())
+   );
     return (
-     <div> 
-        <div className='carousel'>
-          <Carousel/> 
-          <NewsPanel/>    
+     <div className="container-fluid"> 
+     <Header/>
+        <div className='mid-section'>
+          <div style={{width: '70%', float:'left'}}>
+            <Carousel/> 
+          </div>
+          <div style={{width: '30%', float:'left'}}>
+            <NewsPanel/>   
+          </div> 
         </div>
         <div>
-        <Header 
-          handleSearchTxt={this.handleSearchTxt}
-          handleSearchEvent={this.handleSearchEvent}
-          handleAdvancedSearchEvent={this.handleAdvancedSearchEvent}
-          handleTypeTxt={this.handleTypeTxt} 
-          handleYearTxt={this.handleYearTxt}
-          {...remainingItems}
-        />
+          <Nav
+            handleSearchTxt={this.handleSearchTxt}
+            handleSearchEvent={this.handleSearchEvent}
+            handleAdvancedSearchEvent={this.handleAdvancedSearchEvent}
+            handleTypeTxt={this.handleTypeTxt} 
+            handleYearTxt={this.handleYearTxt}
+            {...remainingItems}
+          />
         <div>
-        <MovieCard movies={searchedMovies}/>
+          <MovieCard movies={searchedMovies}/>
         </div>
           <div>
             <nav aria-label="Page navigation example">

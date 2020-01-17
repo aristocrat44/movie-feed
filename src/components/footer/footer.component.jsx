@@ -1,7 +1,8 @@
 import React from 'react';
+import './footer.styles.css';
 
 const Footer =()=>(
-    <div style={{height:'50px', background:'black'}}>
+    <div className='footer'>
       This is footer
     </div>
 )
