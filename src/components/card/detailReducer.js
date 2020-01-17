@@ -1,7 +1,7 @@
 import { ActionTypes } from "./actionType";
 
 const INITIAL_STATE = {
-  movieDetail: [],
+  movie_Data_Array: [],
   loading: false,
   success: "",
   error: ""
@@ -9,13 +9,14 @@ const INITIAL_STATE = {
 
 export default function(state = INITIAL_STATE, action) {
   switch (action.type) {
-    case ActionTypes.MOVIE_LIST_REQUEST:
+    case ActionTypes.MOVIE_DETAIL_REQUEST:
       return { ...state, loading: true };
 
-    case ActionTypes.MOVIE_LIST_SUCCESS:
+    case ActionTypes.MOVIE_DETAIL_SUCCESS:
+      console.log('reducer', action.results);
       return {
         ...state,
-       movieDetails: action.resulta,
+        movie_Data_Array: action.results,
         success: action.success,
         loading: false
       };
