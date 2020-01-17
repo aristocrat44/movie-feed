@@ -19,7 +19,7 @@ return(
       </button>
     </a>
     <div className='form-inline'>
-        <Search value={remainingItems.search} handleSearchTxt={handleSearchTxt}/>
+        <Search placeholder='Quick Search Title' value={remainingItems.search} handleSearchTxt={handleSearchTxt}/>
         <button type="button" className='btn btn-danger my-2 my-sm-0' onClick={handleSearchEvent}>Go !</button>
     </div>
     
@@ -44,15 +44,15 @@ return(
             <div className="form-group">
                 <div>
                   <label style={{float:'left', paddingTop:'7px'}}>Title:</label>
-                  <Search value={remainingItems.search} handleSearchTxt={handleSearchTxt}/>
+                  <Search placeholder='Title' value={remainingItems.search} handleSearchTxt={handleSearchTxt}/>
                 </div>
                 <div>
                   <label style={{float:'left', paddingTop:'7px'}}>Type:</label>
-                  <Type value={remainingItems.type} handleTypeTxt={handleTypeTxt}/>
+                  <Type placeholder='Type e.g. movie, series' value={remainingItems.type} handleTypeTxt={handleTypeTxt}/>
                 </div>
                 <div>
                   <label style={{float:'left', paddingTop:'7px'}}>Release Year:</label>
-                  <Year value={remainingItems.year} handleYearTxt={handleYearTxt}/>
+                  <Year placeholder='Year e.g. 2005' value={remainingItems.year} handleYearTxt={handleYearTxt}/>
                 </div>
             </div>    
 

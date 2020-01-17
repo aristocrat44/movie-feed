@@ -118,11 +118,11 @@ try{
     return (
      <div className="container-fluid"> 
      <Header/>
-        <div className='mid-section'>
-          <div style={{width: '70%', float:'left'}}>
+        <div className='mid-section' style={{display:'flex', justifyContent:'space-evenly', flexDirection:'row'}}>
+          <div style={{width: '70%'}}>
             <Carousel/> 
           </div>
-          <div style={{width: '30%', float:'left'}}>
+          <div style={{width: '30%'}}>
             <NewsPanel/>   
           </div> 
         </div>
