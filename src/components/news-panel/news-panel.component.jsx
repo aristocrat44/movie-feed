@@ -1,6 +1,9 @@
 import React,{useState} from 'react';
 import './news-panel.styles.css';
 import sthings from '../../img/stranger-things.jpg';
+import sthings2 from '../../img/stranger-things-2020.jpg';
+import sthings3 from '../../img/stranger-things-3.jpg';
+import narcos from '../../img/narcos.jpg';
 
 
 export const NewsPanel =  (props) => {
@@ -49,20 +52,23 @@ export const NewsPanel =  (props) => {
   return(
     <div className="news-panel"> 
       <div className="card">
-        <img src={sthings} className="card-img-top" alt="..."/>
+        <img src={narcos} className="card-img-top" alt="..."/>
         <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h5 className="card-title">The Shorty Award</h5>
+          <p class="card-text" style={{paddingTop: '20px'}}>Upcoming Movies</p>
+         
         </div>
         <ul className="list-group list-group-flush">
-          <li className="list-group-item">Cras justo odio</li>
-          <li className="list-group-item">Dapibus ac facilisis in</li>
-          <li className="list-group-item">Vestibulum at eros</li>
+          <li className="list-group-item">Birds of Prey</li>
+          <li className="list-group-item">Top Gun: Maverick</li>
+          <li className="list-group-item">A Quiet Place II</li>
+          <li className="list-group-item">No Time to Die</li>
+          <li className="list-group-item">Wonder Woman 1984</li>
         </ul>
-        <div className="card-body">
+        {/* <div className="card-body">
           <a href="#" className="card-link">Card link</a>
           <a href="#" className="card-link">Another link</a>
-        </div>
+        </div> */}
       </div>
     </div>
   )

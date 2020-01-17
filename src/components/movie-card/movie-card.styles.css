@@ -1,5 +1,6 @@
 .movie-card {
     align-items: center;
+    text-align: center;
     width: 70vw;
     margin-left: 8vw;
     display: grid;
