@@ -88,11 +88,11 @@ const Card = (props) => {
           <h6>{props.movie.Type}</h6>
           <div className="detail-button">
              <button type="button" onClick={()=>getDetailFunc(props.movie.imdbID)} className="btn btn-danger button" data-toggle="modal" data-target="#exampleModalLong">
-            Details here
+            <h4>Details</h4>
              </button> 
             
             </div>
-          <h6>{props.movie.Year}</h6>
+          <h6>{props.movie.Year.slice(0,4)}</h6>
         </div>
         {/* <h6>{props.movie.imdbID}</h6> */}
 

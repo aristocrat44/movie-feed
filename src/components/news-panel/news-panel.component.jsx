@@ -15,13 +15,13 @@ export const NewsPanel =  (props) => {
             <h6>THE SHORTY AWARDS HONOR THE BEST OF SOCIAL MEDIA.</h6>
           </span>
         </div>
-        <p className="card-text"><u>Upcoming Movies</u></p>
-        <ul className="list-group list-group-flush"  style={{textAlign:'left'}}>
+        <p className="card-text"><u>Top Upcoming Movies</u></p>
+        <ul className="list-group list-group-flush">
           <li className="list-group-item">Birds of Prey</li>
           <li className="list-group-item">Top Gun: Maverick</li>
           <li className="list-group-item">A Quiet Place II</li>
-          <li className="list-group-item">No Time to Die</li>
-          <li className="list-group-item">Wonder Woman 1984</li>
+          {/* <li className="list-group-item">No Time to Die</li>
+          <li className="list-group-item">Wonder Woman 1984</li> */}
         </ul>
       </div>
     </div>
