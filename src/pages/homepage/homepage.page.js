@@ -42,8 +42,10 @@ try{
   const jsonData = await blobData.json();
   this.setState({movies: jsonData.Search});
   this.setState({totalResults: jsonData.totalResults});
-  console.log(this.state.totalResults);
-
+    
+  // SET TYPE and YEAR TO NULL TO GET PAGINATION
+  this.setState({type:''});
+  this.setState({year:''});
 }catch(error){
   console.error(error);
 }
@@ -51,16 +53,12 @@ try{
 
 // HANDLE ADVANCE SEARCH
 handleAdvancedSearchEvent= async () =>{
-
   const {search, type, year} = this.state;
-     //console.log([search, type, year]);
   try{
     const blobData = await  fetch(`http://www.omdbapi.com/?apikey=b2ae1b09&s=${search}&type=${type}&y=${year}`);
     const jsonData = await blobData.json();
-    console.log('Advance Search', jsonData);
     this.setState({movies: jsonData.Search});
     this.setState({totalResults: jsonData.totalResults});
-    //nsole.log(this.state.totalResults);
   }catch(error){
     console.error(error);
   }
@@ -76,7 +74,6 @@ handlePrevious= async () => {
     this.setState({pageCount: this.state.pageCount - 1});
     const nextJson = await nextBlob.json();
     this.setState({movies: nextJson.Search});
-    //console.log('Prev counting',this.state.pageCount);
   }
   }catch(error){
     console.error(error);
@@ -85,7 +82,7 @@ handlePrevious= async () => {
 
   // HANDLE NEXT PAGINATION
 handleNext = async () => {
-  const {search, type, year} = this.state;
+  const {search} = this.state;
 try{
   
   const nextBlob = await  fetch(`http://www.omdbapi.com/?apikey=b2ae1b09&s=${search}&page=${this.state.pageCount+1}`);
@@ -102,7 +99,9 @@ try{
 
   render(){
    const{movies, ...remainingItems} = this.state;
+    // SORT FETCHED DATA BY ASCENDING ORDER of YEAR
    const sortedMovies = movies.slice().sort((a,b)=> a.Year-b.Year);
+    // FILTER FETCHED DATA THAT INCLUDES THE value WE PASS IN SEARCH FIELD
    const searchedMovies = sortedMovies.filter(movie => 
       movie.Title.toLowerCase().includes(remainingItems.search.toLowerCase())
    );
@@ -130,13 +129,14 @@ try{
           <MovieCard movies={searchedMovies}/>
         </div>
         <div style={{paddingTop:'10px'}}>
-           <div style={{display:`${this.state.type.length > 0 || this.state.year.length > 0 || searchedMovies.length == 0 ? 'none': ''}`}}>
+              {/* HIDE PAGINATION WHEN USING ADVANCED SEARCH */}
+           <div style={{display:`${this.state.type.length > 0 || this.state.year.length > 0 || searchedMovies.length === 0 ? 'none': ''}`}}>
               <nav aria-label="Page navigation example">
-                <ul class="pagination justify-content-center" style={{alignItems:'center'}}>
+                <ul className="pagination justify-content-center" style={{alignItems:'center'}}>
                   <li  className={`page-item${this.state.pageCount <= 1 ? ' disabled': ''}`}>
-                    <a  className="page-link" onClick={this.handlePrevious} tabindex="-1" aria-disabled="true">Previous</a>
+                    <a  className="page-link" onClick={this.handlePrevious} tabIndex="-1" aria-disabled="true">Previous</a>
                   </li>
-                  <li class="page-item">
+                  <li className="page-item">
                     <a className={`page-link${this.state.pageCount <= Math.round(this.state.totalResults/10) ? ' disabled': ''}`} onClick={this.handleNext}>Next</a>
                   </li>
                 </ul>

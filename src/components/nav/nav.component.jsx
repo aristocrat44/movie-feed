@@ -7,7 +7,7 @@ import './nav.styles.css';
 const Nav =({ handleSearchEvent, handleAdvancedSearchEvent, handleSearchTxt, handleYearTxt, handleTypeTxt, ...remainingItems})=>{
 
   useEffect(()=>{
-  console.log(remainingItems);
+  //console.log(remainingItems);
 },[])
   
 return(
@@ -20,7 +20,15 @@ return(
     </a>
     <div className='form-inline'>
         <Search placeholder='Quick Search Title' value={remainingItems.search} handleSearchTxt={handleSearchTxt}/>
-        <button type="button" className='btn btn-danger my-2 my-sm-0' onClick={handleSearchEvent}>Go !</button>
+        {(() => {
+												// HIDIND GO ! BUTTON
+												if (remainingItems.search.length > 2) {
+													return (
+                            <button type="button" className='btn btn-danger my-2 my-sm-0' onClick={handleSearchEvent}>GO !</button>
+													);
+												}
+				})()}
+        
     </div>
     
     </nav>
@@ -58,7 +66,15 @@ return(
 
             </div>
             <div className="modal-footer">
-            <button type="button" className="btn btn-primary" onClick={handleAdvancedSearchEvent}>GO !</button>
+              {(() => {
+                          // HIDING GO ! BUTTON
+                          if (remainingItems.search.length > 1 && (remainingItems.type === 'movie' || remainingItems.type==='series') && remainingItems.year.length === 4) {
+                            return (
+                              <button type="button" className="btn btn-primary" onClick={handleAdvancedSearchEvent}>GO !</button>
+                            );
+                          }
+              })()}
+            
             <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>  
             </div>
            </div>

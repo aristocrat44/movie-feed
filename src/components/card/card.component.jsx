@@ -9,9 +9,8 @@ import { bindActionCreators } from 'redux';
 const Card = (props) => {
 
 
-
+  // FUNCTION THAT FETCHES MOVIE DETAILS PASSING imdbID parameter into ACTION
     const getDetailFunc = (imdbID) =>{
-      //console.log(imdbID);
      props.actions.movieDetailAction(imdbID);
    
     }
@@ -54,6 +53,14 @@ const Card = (props) => {
                         <tr>
                           <td>Director:</td>
                         <td>{props.moviedata.Director}</td>
+                        </tr>
+                        <tr>
+                          <td>imdbRating:</td>
+                          <td>{props.moviedata.imdbRating}</td>
+                        </tr>
+                        <tr>
+                          <td>Plot:</td>
+                          <td>{props.moviedata.Plot}</td>
                         </tr>
                     </tbody>
                   </table>
