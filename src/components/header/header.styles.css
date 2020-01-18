@@ -1,10 +1,20 @@
 .header {
     height:70px;
     background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-    /* background-color:black;  */
     margin-bottom: 10px;
     color: white;
-
     border-radius: 10px     10px      0           0;
+    display: flex;
+    justify-content: space-between;
             /* // top-left top-right bottom-right bottom-left.  */
 }
+
+h1{
+    font-family:'vibes';
+    font-size: 50px;
+    padding: 5px;
+  }
+h6
+  {
+    padding: 5px;
+  }

@@ -57,11 +57,7 @@ const Card = (props) => {
                         </tr>
                     </tbody>
                   </table>
-                    <span>Title:{props.moviedata.Title}</span>
-                    <span>Year:{props.moviedata.Year}</span>
-                    <span>Rated:{props.moviedata.Rated}</span>
-                    <span>RunTime:{props.moviedata.Runtime}</span>
-                    <span>Genre:{props.moviedata.Genre}</span>
+                    
                   {/* {
                     props.moviedata.map(data =>
                     <td key={data.imdbID}>{data.Title}</td>
@@ -83,11 +79,10 @@ const Card = (props) => {
         </div>
         <div className='card-footer'>
           <h6>{props.movie.Type}</h6>
-          <div>
+          <div className="detail-button">
              <button type="button" onClick={()=>getDetailFunc(props.movie.imdbID)} className="btn btn-danger button" data-toggle="modal" data-target="#exampleModalLong">
-            More Detail
+            Details here
              </button> 
-        {/* <!-- Modal --> */}
             
             </div>
           <h6>{props.movie.Year}</h6>

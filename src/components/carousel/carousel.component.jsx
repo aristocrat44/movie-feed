@@ -2,7 +2,7 @@ import React from 'react';
 import './carousel.styles.css';
 import avengers from '../../img/avengers.jpg';
 import irishman from '../../img/irishman.jpg';
-import joker from '../../img/joker.jpg'
+import joker from '../../img/joker.jpg';
 
 const Carousel = () => (
   <div className="custom-size">

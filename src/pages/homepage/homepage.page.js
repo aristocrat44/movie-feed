@@ -66,15 +66,6 @@ handleAdvancedSearchEvent= async () =>{
   }
   }
 
-  // HANDLE PAGINATION 1 2 3
-handlePagination = async (param) => {
-  this.setState({pageCount:param});
-  const search = this.state.search;
-  const blobData = await  fetch(`http://www.omdbapi.com/?apikey=b2ae1b09&s=${search}&page=${param}`);
-  const jsonData = await blobData.json();
-
-  this.setState({movies: jsonData.Search});
-}
 
 // HANDLE PREVIOUS PAGINATION
 handlePrevious= async () => {
@@ -139,23 +130,20 @@ try{
           <MovieCard movies={searchedMovies}/>
         </div>
         <div style={{paddingTop:'10px'}}>
-          <div style={{display:`${this.state.type.length > 0 || this.state.year.length > 0 ? 'none': ''}`}}>
-            <nav aria-label="Page navigation example">
-              <ul className="pagination justify-content-center">
-                <li className={`page-item${this.state.pageCount <= 1 ? ' disabled': ''}`}>
-                  <a className="page-link" onClick={this.handlePrevious}>Previous</a>
-                </li>
-                  <li className="page-item page-link" onClick={() =>this.handlePagination(1)}>1</li>
-                  <li className="page-item page-link" onClick={() =>this.handlePagination(2)}>2</li>
-                  <li className="page-item page-link" onClick={() =>this.handlePagination(3)}>3</li>
-                <li>
-                  <a className={`page-link${this.state.pageCount <= Math.round(this.state.totalResults/10) ? ' disabled': ''}`} onClick={this.handleNext}>Next</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+           <div style={{display:`${this.state.type.length > 0 || this.state.year.length > 0 || searchedMovies.length == 0 ? 'none': ''}`}}>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center" style={{alignItems:'center'}}>
+                  <li  className={`page-item${this.state.pageCount <= 1 ? ' disabled': ''}`}>
+                    <a  className="page-link" onClick={this.handlePrevious} tabindex="-1" aria-disabled="true">Previous</a>
+                  </li>
+                  <li class="page-item">
+                    <a className={`page-link${this.state.pageCount <= Math.round(this.state.totalResults/10) ? ' disabled': ''}`} onClick={this.handleNext}>Next</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
         </div>
-        </div>
+      </div>
       <Footer/>
     </div>
   
@@ -163,3 +151,30 @@ try{
   }
 }
 export default HomePage;
+
+
+///// removed ////
+ {/* <nav aria-label="Page navigation example">
+              <ul className="pagination justify-content-center">
+                <li className={`page-item${this.state.pageCount <= 1 ? ' disabled': ''}`}>
+                  <a className="page-link" onClick={this.handlePrevious}>Previous</a>
+                </li>
+                                    <li className="page-item" style={{background:'white'}} onClick={() =>this.handlePagination(1)}>1</li>
+                  <li className="page-item" onClick={() =>this.handlePagination(2)}>2</li>
+                  <li className="page-item" onClick={() =>this.handlePagination(3)}>3</li>
+                <li>
+                  <a className={`page-link${this.state.pageCount <= Math.round(this.state.totalResults/10) ? ' disabled': ''}`} onClick={this.handleNext}>Next</a>
+                </li>
+              </ul>
+            </nav>
+          */}
+
+            // HANDLE PAGINATION 1 2 3
+// handlePagination = async (param) => {
+//   this.setState({pageCount:param});
+//   const search = this.state.search;
+//   const blobData = await  fetch(`http://www.omdbapi.com/?apikey=b2ae1b09&s=${search}&page=${param}`);
+//   const jsonData = await blobData.json();
+
+//   this.setState({movies: jsonData.Search});
+// }

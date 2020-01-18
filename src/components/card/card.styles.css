@@ -4,18 +4,20 @@
     border: 1px solid grey;
     border-radius: 5px;
     padding: 25px;
-   
+   align-items: center;
     -moz-osx-font-smoothing: grayscale;
     backface-visibility: hidden;
     transform: translateZ(0);
     transition: transform 0.25s ease-out;
   }
+
   .poster{
     height: 300px;
     width: 220px;
   }
 h6{
-  font-size: 12px;
+  font-size: 15px;
+  font-weight: bold !important;
 }
   .button {
     height: auto;
@@ -26,12 +28,18 @@ h6{
   }
 
   .card-container:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
+    box-shadow: 7px 10px 12px -5px rgba(0, 0, 0, 0.56);
   }
 
   .card-footer {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: row; 
+  }
+
+  .detail-button{
+  padding-right: 10px;
+  padding-left: 10px;
   }
   

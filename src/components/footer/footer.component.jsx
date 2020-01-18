@@ -3,7 +3,8 @@ import './footer.styles.css';
 
 const Footer =()=>(
     <div className='footer'>
-      This is footer
+      <p>© 2020 JAVRA, Code challenge - JavaScript Developer</p>
+      <p>Atish Maharjan, +977-9866265050, arcrt1993@gmail.com</p>
     </div>
 )
 

@@ -54,11 +54,15 @@ export const NewsPanel =  (props) => {
       <div className="card">
         <img src={narcos} className="card-img-top" alt="..."/>
         <div className="card-body">
-          <h5 className="card-title">The Shorty Award</h5>
-          <p class="card-text" style={{paddingTop: '20px'}}>Upcoming Movies</p>
+          <p>
+            <h5 className="card-title">The Shorty Award: Narcos</h5>
+            <h6>THE SHORTY AWARDS HONOR THE BEST OF SOCIAL MEDIA.</h6>
+          </p>
+        
          
         </div>
-        <ul className="list-group list-group-flush">
+        <p class="card-text"><u>Upcoming Movies</u></p>
+        <ul className="list-group list-group-flush"  style={{textAlign:'left'}}>
           <li className="list-group-item">Birds of Prey</li>
           <li className="list-group-item">Top Gun: Maverick</li>
           <li className="list-group-item">A Quiet Place II</li>

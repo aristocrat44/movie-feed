@@ -11,15 +11,16 @@ li {
  }
 
  .news-panel{
-     /* background-size: contain;
-     background-image: url(../../img/stranger-things.jpg);
-        background-position: center; */
-     width: auto;
-     height:auto;
-     display: flex;
-     margin: 0 0 10px 20px;
+     /* width: auto; */
+     min-width: 0vh;
+     min-height: auto;
+     height:95%;
+     max-height: auto;
+     display: inline-block;
+     margin: 0 0 10px 10px;
+     box-sizing:border-box;
+     
    
-    
-     border: 2px solid black;
      border-radius: 6px;
+     
  }
