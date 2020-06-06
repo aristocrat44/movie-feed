@@ -1,9 +1,0 @@
-.footer {
-    height:70px;
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-    margin-bottom: 10px;
-    color: white;
-    font-family: 'Open Sans Condensed' !important; 
-    border-radius: 0px     0px      10px           10px;
-            /* // top-left top-right bottom-right bottom-left.  */
-}

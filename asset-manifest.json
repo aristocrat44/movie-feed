@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/movie-feed/static/css/main.842ee006.chunk.css",
+    "main.js": "/movie-feed/static/js/main.bc9f659d.chunk.js",
+    "main.js.map": "/movie-feed/static/js/main.bc9f659d.chunk.js.map",
+    "runtime-main.js": "/movie-feed/static/js/runtime-main.87f0c744.js",
+    "runtime-main.js.map": "/movie-feed/static/js/runtime-main.87f0c744.js.map",
+    "static/js/2.b1754da3.chunk.js": "/movie-feed/static/js/2.b1754da3.chunk.js",
+    "static/js/2.b1754da3.chunk.js.map": "/movie-feed/static/js/2.b1754da3.chunk.js.map",
+    "index.html": "/movie-feed/index.html",
+    "precache-manifest.012cd735121e02a7af297f77a629ebfa.js": "/movie-feed/precache-manifest.012cd735121e02a7af297f77a629ebfa.js",
+    "service-worker.js": "/movie-feed/service-worker.js",
+    "static/css/main.842ee006.chunk.css.map": "/movie-feed/static/css/main.842ee006.chunk.css.map",
+    "static/js/2.b1754da3.chunk.js.LICENSE": "/movie-feed/static/js/2.b1754da3.chunk.js.LICENSE",
+    "static/media/avengers.jpg": "/movie-feed/static/media/avengers.aa4ae27d.jpg",
+    "static/media/irishman.jpg": "/movie-feed/static/media/irishman.7dafd71e.jpg",
+    "static/media/joker.jpg": "/movie-feed/static/media/joker.154fbe34.jpg",
+    "static/media/narcos.jpg": "/movie-feed/static/media/narcos.9b0a20ac.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.87f0c744.js",
+    "static/js/2.b1754da3.chunk.js",
+    "static/css/main.842ee006.chunk.css",
+    "static/js/main.bc9f659d.chunk.js"
+  ]
+}
